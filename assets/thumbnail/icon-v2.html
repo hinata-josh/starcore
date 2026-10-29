@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>星核守護者 圖示 v2 512x512</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #05081a; overflow: hidden; }
+  svg { display: block; width: 512px; height: 512px; }
+  .t { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; font-weight: 900; }
+  .comic { font-family: "Arial Black", "Impact", sans-serif; font-weight: 900; }
+</style>
+</head>
+<body>
+<!-- 圖示 v2(和縮圖 v2 同風格):縮小後也看得懂 → 元素少而大:標題、裂縫巨獸、方塊人、光子砲射擊 + POW。
+     Roblox 會切圓角,重要元素留在中央約 440px 內 -->
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky" cx="65%" cy="35%" r="90%">
+      <stop offset="0" stop-color="#4a2496"/><stop offset="0.5" stop-color="#171b5c"/><stop offset="1" stop-color="#060822"/>
+    </radialGradient>
+    <radialGradient id="portal" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.2" stop-color="#ffd2ff"/><stop offset="0.5" stop-color="#c04cff"/>
+      <stop offset="0.85" stop-color="#5a1bc0" stop-opacity="0.7"/><stop offset="1" stop-color="#2a0a70" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="40%" cy="20%" r="85%">
+      <stop offset="0" stop-color="#8ff0b4"/><stop offset="0.45" stop-color="#36bd86"/><stop offset="1" stop-color="#145f73"/>
+    </radialGradient>
+    <radialGradient id="orbGold" cx="40%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.4" stop-color="#ffe98a"/><stop offset="1" stop-color="#ff9d2a"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#ffec9e"/><stop offset="1" stop-color="#ffa52e"/>
+    </linearGradient>
+    <filter id="blur10"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="bigGlow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.45"/></filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <g id="stars"></g>
+
+  <!-- 裂縫傳送門 -->
+  <g transform="translate(340 250)">
+    <circle r="175" fill="url(#portal)" filter="url(#blur10)"/>
+    <circle r="125" fill="url(#portal)"/>
+    <g id="shards"></g>
+  </g>
+
+  <!-- 裂縫巨獸 -->
+  <g transform="translate(345 262) scale(0.62)" filter="url(#shadow)">
+    <path d="M-140 60 C-160 -60 -90 -140 0 -145 C90 -140 160 -60 140 60 C125 150 60 190 0 190 C-60 190 -125 150 -140 60 Z"
+          fill="#46125f" stroke="#f08cff" stroke-width="9"/>
+    <g fill="#ff7de9" stroke="#fff" stroke-width="5" filter="url(#glow)">
+      <path d="M-95 -110 L-150 -230 L-55 -140 Z"/>
+      <path d="M95 -110 L150 -230 L55 -140 Z"/>
+      <path d="M-30 -140 L-10 -250 L10 -140 Z" fill="#ffe0ff"/>
+    </g>
+    <g filter="url(#bigGlow)">
+      <ellipse cx="-52" cy="-40" rx="34" ry="25" fill="#ff3fd5"/>
+      <ellipse cx="52" cy="-40" rx="34" ry="25" fill="#ff3fd5"/>
+      <circle cx="0" cy="-90" r="20" fill="#ffffff"/>
+    </g>
+    <circle cx="-45" cy="-44" r="11" fill="#fff"/><circle cx="59" cy="-44" r="11" fill="#fff"/>
+    <path d="M-62 14 Q0 58 62 14" fill="#1b0526" stroke="#f08cff" stroke-width="6"/>
+    <path d="M-46 20 l12 24 l10 -20 l12 24 l10 -22 l12 24 l10 -22 l12 20" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="0" cy="96" r="26" fill="#ffd6ff" filter="url(#bigGlow)"/>
+  </g>
+
+  <!-- 星球 -->
+  <circle cx="256" cy="900" r="540" fill="#7fe0ff" opacity="0.35" filter="url(#blur10)"/>
+  <circle cx="256" cy="900" r="520" fill="url(#planet)"/>
+  <path d="M-264 900 A520 520 0 0 1 776 900" fill="none" stroke="#d6fbff" stroke-width="6" opacity="0.85"/>
+
+  <!-- 光子砲(右下)射向巨獸 -->
+  <g transform="translate(400 392) rotate(16)">
+    <path d="M-34 0 L-26 -20 L26 -20 L34 0 Z" fill="#d9a845" stroke="#fff2c4" stroke-width="3"/>
+    <path d="M-22 -18 L-13 -72 L-6 -70 L-10 -18 Z M22 -18 L13 -72 L6 -70 L10 -18 Z" fill="#c8932f" stroke="#fff2c4" stroke-width="2"/>
+    <circle cx="0" cy="-88" r="22" fill="url(#orbGold)" filter="url(#bigGlow)"/>
+  </g>
+  <line x1="424" y1="306" x2="350" y2="300" stroke="#ffe35a" stroke-width="12" stroke-linecap="round" opacity="0.6" filter="url(#glow)"/>
+  <line x1="424" y1="306" x2="350" y2="300" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <g id="pow" transform="translate(338 300) rotate(-10)"></g>
+
+  <!-- 方塊人(左下,指向巨獸) -->
+  <g transform="translate(150 414) scale(0.92)" filter="url(#shadow)">
+    <rect x="-50" y="-50" width="100" height="124" rx="10" fill="#2f7cf6" stroke="#1d2333" stroke-width="6"/>
+    <circle cx="0" cy="8" r="20" fill="#ffd23c" stroke="#fff" stroke-width="4"/>
+    <rect x="-96" y="-48" width="42" height="116" rx="10" fill="#ffd23c" stroke="#1d2333" stroke-width="6" transform="rotate(18 -75 -40)"/>
+    <rect x="54" y="-48" width="42" height="116" rx="10" fill="#ffd23c" stroke="#1d2333" stroke-width="6" transform="rotate(-122 75 -40)"/>
+    <rect x="-44" y="-140" width="88" height="86" rx="22" fill="#ffd23c" stroke="#1d2333" stroke-width="6"/>
+    <path d="M-48 -128 C-40 -170 40 -176 50 -126 C30 -140 -10 -146 -48 -128 Z" fill="#c25a1d" stroke="#1d2333" stroke-width="5"/>
+    <ellipse cx="-16" cy="-102" rx="8" ry="11" fill="#1d2333"/><ellipse cx="16" cy="-102" rx="8" ry="11" fill="#1d2333"/>
+    <circle cx="-13" cy="-106" r="3.5" fill="#fff"/><circle cx="19" cy="-106" r="3.5" fill="#fff"/>
+    <path d="M-20 -80 Q0 -54 20 -80 Z" fill="#7a1f2a" stroke="#1d2333" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 標題 -->
+  <g transform="translate(256 96) rotate(-3)" text-anchor="middle">
+    <text class="t" x="4" y="7" font-size="88" fill="#16053f" opacity="0.7">星核守護者</text>
+    <text class="t" x="0" y="0" font-size="88" fill="#fff" stroke="#5a1fe0" stroke-width="13" stroke-linejoin="round" paint-order="stroke">星核守護者</text>
+    <text class="t" x="0" y="0" font-size="88" fill="url(#titleFill)">星核守護者</text>
+  </g>
+</svg>
+<script>
+let seed = 20261031;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const stars = document.getElementById('stars');
+for (let i = 0; i < 80; i++) el('circle', { cx: rnd() * 512, cy: rnd() * 380, r: rnd() * 1.8 + 0.4, fill: '#fff', opacity: (0.35 + rnd() * 0.65).toFixed(2) }, stars);
+const shards = document.getElementById('shards');
+for (let k = 0; k < 14; k++) {
+  const a = k / 14 * 360, r = 140 + (k % 2) * 8;
+  el('rect', { x: -6, y: -15, width: 12, height: 30, rx: 4, fill: k % 2 ? '#ff8ff0' : '#a96bff', transform: `rotate(${a}) translate(${r} 0) rotate(${30 + k * 11})`, filter: 'url(#glow)' }, shards);
+}
+// POW 爆炸星
+const pow = document.getElementById('pow');
+let d = '';
+for (let i = 0; i < 20; i++) { const a = i / 20 * Math.PI * 2, rr = i % 2 ? 30 : 50; d += (i ? 'L' : 'M') + (Math.cos(a) * rr).toFixed(1) + ' ' + (Math.sin(a) * rr).toFixed(1); }
+el('path', { d: d + 'Z', fill: '#ff5a2e', stroke: '#fff', 'stroke-width': 5, 'stroke-linejoin': 'round' }, pow);
+const t = el('text', { class: 'comic', 'font-size': 26, 'text-anchor': 'middle', y: 9, fill: '#fff', stroke: '#7a1200', 'stroke-width': 5, 'paint-order': 'stroke' }, pow);
+t.textContent = 'POW!';
+</script>
+</body>
+</html>

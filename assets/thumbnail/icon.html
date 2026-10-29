@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>星核守護者 圖示 512x512</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #05081a; overflow: hidden; }
+  svg { display: block; width: 512px; height: 512px; }
+  .title { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; font-weight: 900; }
+</style>
+</head>
+<body>
+<!-- Roblox 體驗圖示:正方形 512x512,重要元素留在中央 ~440 內,避免被圓角裁到 -->
+<svg id="art" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="35%" r="85%">
+      <stop offset="0" stop-color="#2a1b6b"/>
+      <stop offset="0.5" stop-color="#101a4a"/>
+      <stop offset="1" stop-color="#04061a"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="38%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#7fe0b0"/>
+      <stop offset="0.45" stop-color="#2fae8a"/>
+      <stop offset="0.8" stop-color="#16607a"/>
+      <stop offset="1" stop-color="#0a2748"/>
+    </radialGradient>
+    <radialGradient id="rift" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.25" stop-color="#e9a8ff"/>
+      <stop offset="0.6" stop-color="#9a3cff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#4a1aa8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shield" cx="50%" cy="50%" r="50%">
+      <stop offset="0.7" stop-color="#6fd0ff" stop-opacity="0"/>
+      <stop offset="0.93" stop-color="#6fd0ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#bff0ff" stop-opacity="0.9"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#ffe9a8"/><stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+    <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="blur10"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="planetClip"><circle cx="256" cy="760" r="330"/></clipPath>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <g id="stars"></g>
+
+  <!-- 時空裂縫(右上) -->
+  <g transform="translate(372 200)">
+    <ellipse rx="120" ry="100" fill="url(#rift)" filter="url(#blur10)"/>
+    <ellipse rx="62" ry="92" fill="url(#rift)"/>
+    <ellipse rx="28" ry="82" fill="#ffffff" opacity="0.9" filter="url(#blur4)"/>
+    <g stroke="#e9b8ff" stroke-width="3" fill="none" opacity="0.85" filter="url(#glow)">
+      <path d="M-14 -92 L-4 -56 L-20 -32 L-3 0 L-19 36 L-2 92"/>
+      <path d="M14 -88 L4 -52 L21 -24 L2 8 L19 44 L3 88"/>
+    </g>
+  </g>
+
+  <!-- 首領怪獸剪影 -->
+  <g fill="#1a0b3a" stroke="#c77dff" stroke-width="3" stroke-linejoin="round" filter="url(#glow)">
+    <g transform="translate(368 222) rotate(-10) scale(0.5)">
+      <path d="M-120 60 C-140 -40 -90 -110 -30 -120 L-10 -170 L20 -118 C90 -112 140 -50 120 50 C100 120 40 150 0 150 C-60 150 -110 120 -120 60 Z"/>
+      <path d="M-70 -110 L-92 -178 L-48 -132 Z M60 -110 L98 -176 L74 -118 Z"/>
+      <circle cx="-38" cy="-20" r="22" fill="#ff5d73" stroke="none"/><circle cx="38" cy="-20" r="22" fill="#ff5d73" stroke="none"/>
+      <circle cx="-34" cy="-22" r="8" fill="#fff" stroke="none"/><circle cx="42" cy="-22" r="8" fill="#fff" stroke="none"/>
+      <path d="M-50 52 L-30 82 L-8 52 L12 82 L34 52 L54 80" fill="none" stroke="#ffe6ff" stroke-width="7"/>
+    </g>
+  </g>
+
+  <!-- 主角星球 -->
+  <circle cx="256" cy="760" r="345" fill="#7fd6ff" opacity="0.35" filter="url(#blur10)"/>
+  <circle cx="256" cy="760" r="330" fill="url(#planet)"/>
+  <g clip-path="url(#planetClip)" opacity="0.5">
+    <ellipse cx="140" cy="480" rx="60" ry="16" fill="#1a8a6a"/>
+    <ellipse cx="360" cy="490" rx="55" ry="14" fill="#1a8a6a"/>
+  </g>
+  <path d="M-74 760 A330 330 0 0 1 586 760" fill="none" stroke="#c8f6ff" stroke-width="5" opacity="0.85"/>
+
+  <!-- 能量護盾 -->
+  <ellipse cx="256" cy="420" rx="235" ry="120" fill="url(#shield)"/>
+
+  <!-- 建築 + 光束 -->
+  <g id="buildings"></g>
+  <g id="beams" filter="url(#glow)"></g>
+
+  <!-- 標題 -->
+  <g transform="translate(256 112)" text-anchor="middle">
+    <text class="title" x="3" y="5" font-size="82" fill="#1a0b4a" opacity="0.65">星核守護者</text>
+    <text class="title" x="0" y="0" font-size="82" fill="#ffffff" stroke="#6a2cff" stroke-width="8" stroke-linejoin="round" paint-order="stroke">星核守護者</text>
+    <text class="title" x="0" y="0" font-size="82" fill="url(#titleFill)">星核守護者</text>
+  </g>
+</svg>
+
+<script>
+// 固定種子的亂數,每次產生的圖都一樣
+let seed = 20261029;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  parent.appendChild(e);
+  return e;
+};
+
+// 星星
+const stars = document.getElementById('stars');
+for (let i = 0; i < 70; i++) {
+  el('circle', { cx: rnd() * 512, cy: rnd() * 360, r: rnd() * 1.6 + 0.4, fill: '#fff', opacity: (0.35 + rnd() * 0.65).toFixed(2) }, stars);
+}
+
+// 星球弧面上的建築:圓心 (256,700) 半徑 330,底部朝向球心
+const B = document.getElementById('buildings');
+const C = { x: 256, y: 760, r: 330 };
+function place(angleDeg, draw) {
+  const a = (angleDeg - 90) * Math.PI / 180;
+  const x = C.x + Math.cos(a) * C.r, y = C.y + Math.sin(a) * C.r;
+  const g = el('g', { transform: `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${angleDeg})` }, B);
+  draw(g);
+  return { x, y, angleDeg };
+}
+// 與 thumbnail.html 同款建築(y 往上是負的)
+const turret = (g, s = 1) => {
+  el('rect', { x: -34 * s, y: -18 * s, width: 68 * s, height: 20 * s, rx: 6 * s, fill: '#3a4468' }, g);
+  el('path', { d: `M${-26 * s} ${-18 * s} L${-18 * s} ${-52 * s} L${18 * s} ${-52 * s} L${26 * s} ${-18 * s} Z`, fill: '#ff6a6a', stroke: '#fff', 'stroke-width': 2 }, g);
+  el('rect', { x: -7 * s, y: -112 * s, width: 14 * s, height: 64 * s, rx: 5 * s, fill: '#e8eefc', stroke: '#3a4468', 'stroke-width': 2 }, g);
+  el('rect', { x: -11 * s, y: -124 * s, width: 22 * s, height: 16 * s, rx: 5 * s, fill: '#ffd93d', filter: 'url(#glow)' }, g);
+};
+const solar = (g, s = 1) => {
+  el('rect', { x: -4 * s, y: -44 * s, width: 8 * s, height: 44 * s, fill: '#3a4468' }, g);
+  el('path', { d: `M${-62 * s} ${-50 * s} L${62 * s} ${-50 * s} L${50 * s} ${-84 * s} L${-50 * s} ${-84 * s} Z`, fill: '#3fb6ff', stroke: '#fff', 'stroke-width': 2 }, g);
+};
+const gate = (g, s = 1) => {
+  el('rect', { x: -70 * s, y: -12 * s, width: 140 * s, height: 12 * s, fill: '#3a4468' }, g);
+  el('rect', { x: -62 * s, y: -150 * s, width: 22 * s, height: 140 * s, rx: 5 * s, fill: '#cfd6f5', stroke: '#fff', 'stroke-width': 2 }, g);
+  el('rect', { x: 40 * s, y: -150 * s, width: 22 * s, height: 140 * s, rx: 5 * s, fill: '#cfd6f5', stroke: '#fff', 'stroke-width': 2 }, g);
+  el('rect', { x: -74 * s, y: -176 * s, width: 148 * s, height: 28 * s, rx: 8 * s, fill: '#a56bff', stroke: '#fff', 'stroke-width': 2 }, g);
+  el('rect', { x: -40 * s, y: -140 * s, width: 80 * s, height: 128 * s, rx: 10 * s, fill: '#c9a0ff', opacity: 0.75, filter: 'url(#glow)' }, g);
+};
+const reactor = (g, s = 1) => {
+  el('rect', { x: -38 * s, y: -80 * s, width: 76 * s, height: 80 * s, rx: 14 * s, fill: '#37d98a', stroke: '#fff', 'stroke-width': 2 }, g);
+  el('circle', { cx: 0, cy: -44 * s, r: 20 * s, fill: '#eafff5', filter: 'url(#glow)' }, g);
+  el('rect', { x: -48 * s, y: -92 * s, width: 96 * s, height: 14 * s, rx: 6 * s, fill: '#3a4468' }, g);
+};
+
+const placed = [];
+const plan = [[-30, solar, 0.7], [-18, turret, 0.8], [-5, gate, 0.75], [10, reactor, 0.7], [24, turret, 0.85]];
+for (const [ang, fn, s] of plan) placed.push({ ...place(ang, (g) => fn(g, s)), fn, s });
+
+// 砲台光束射向首領怪獸
+const beams = document.getElementById('beams');
+const target = { x: 368, y: 222 };
+for (const p of placed) {
+  if (p.fn !== turret) continue;
+  const a = (p.angleDeg - 90) * Math.PI / 180;
+  const ox = p.x + Math.cos(a) * 120 * p.s, oy = p.y + Math.sin(a) * 120 * p.s;
+  el('line', { x1: ox, y1: oy, x2: target.x, y2: target.y, stroke: '#ffe27a', 'stroke-width': 6, 'stroke-linecap': 'round', opacity: 0.95 }, beams);
+  el('line', { x1: ox, y1: oy, x2: target.x, y2: target.y, stroke: '#fff', 'stroke-width': 2, 'stroke-linecap': 'round' }, beams);
+}
+el('circle', { cx: target.x, cy: target.y, r: 14, fill: '#fff6a8', opacity: 0.85 }, beams);
+</script>
+</body>
+</html>

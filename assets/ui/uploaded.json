@@ -1,0 +1,222 @@
+{
+    "btn_blue":  {
+                     "sha":  "BC06A66C83BE8E4F9A4E70AE427E2670C5B8F77702002C325EDBBA32C82A00FF",
+                     "id":  "138629415919833",
+                     "kind":  "decal"
+                 },
+    "btn_close":  {
+                      "sha":  "DCAD9717F44AC59B7C68E0FC11F75F3582E17F7E169BE2459E0BBF6FBDB29B07",
+                      "id":  "109436026338778",
+                      "kind":  "decal"
+                  },
+    "btn_gold":  {
+                     "sha":  "33733693823FF53101E36FD4C3A952C69D3BC1D04C1C8496A951A9496725F8CF",
+                     "id":  "88922904421247",
+                     "kind":  "decal"
+                 },
+    "btn_gray":  {
+                     "sha":  "367BE11EDCF9E51F0979D10EA1ED167E2071EB22521377508197AB2E15E7FF8E",
+                     "id":  "118843121687892",
+                     "kind":  "decal"
+                 },
+    "btn_green":  {
+                      "sha":  "2E36DA865007C783F1B305BE708CA9790E681B5C89E7A88C14E9270DEB45FAE8",
+                      "id":  "135349958628971",
+                      "kind":  "decal"
+                  },
+    "btn_orange":  {
+                       "sha":  "8AFB26F9BAFE119A16B0686559DB869949A37DC2DD92BD4650C826FF93C108FE",
+                       "id":  "105768865804333",
+                       "kind":  "decal"
+                   },
+    "btn_red":  {
+                    "sha":  "A9369B9AD0D350B7E80BBCDB100472BC1AB73F30B4E068A6452E6E616B66AB4D",
+                    "id":  "130894123170462",
+                    "kind":  "decal"
+                },
+    "btn_white":  {
+                      "sha":  "735F8B6EFF04E05913C501BF3CDDF2B6BF42A3F65411B1251104838B9DE4FCB1",
+                      "id":  "111539086957285",
+                      "kind":  "decal"
+                  },
+    "card_t1":  {
+                    "sha":  "912377D23916A9E515BC66425ABA879B3221F8B68FA282063C39AE2FCB12DE32",
+                    "id":  "106509012656355",
+                    "kind":  "decal"
+                },
+    "card_t2":  {
+                    "sha":  "318443E10F041196E239A3698FE775170FE3ED51BE1CDAFB22D6FF6E4F7749B5",
+                    "id":  "116926356221111",
+                    "kind":  "decal"
+                },
+    "card_t3":  {
+                    "sha":  "F5304435996D77E8755F914EC305DD62C65694BCC1DD06AC4F83B219E56FD7AB",
+                    "id":  "87178500587507",
+                    "kind":  "decal"
+                },
+    "card_t4":  {
+                    "sha":  "D5D4251D1693748F18ECB3BBCE0B82AF3FE163260F18910D96046C2903E56F05",
+                    "id":  "102849239064279",
+                    "kind":  "decal"
+                },
+    "card_t5":  {
+                    "sha":  "8FBF944515B9A9FD4CEAAE7D09E41113EC3526B4835240BB24848563AEBD70AE",
+                    "id":  "110614598290582",
+                    "kind":  "decal"
+                },
+    "cat_Attack":  {
+                       "sha":  "D5D6D2E47EFE43B7E68E148737A4831852F59833FC6DC2AC729F789F168DAA23",
+                       "id":  "106748288954340",
+                       "kind":  "decal"
+                   },
+    "cat_Collect":  {
+                        "sha":  "1E344CE87DAD9D4179D155A79AA4059E5B7EE15F3B1086A4102DF906B54B3A7A",
+                        "id":  "92201080809552",
+                        "kind":  "decal"
+                    },
+    "cat_Defense":  {
+                        "sha":  "F81489FD7A50372CA52FB706A90CB8B91ACAE472649D697A3B44DD5B7F11E23F",
+                        "id":  "135035403102019",
+                        "kind":  "decal"
+                    },
+    "cat_Energy":  {
+                       "sha":  "98C0C2D502DEB9676F40C50E889ACA5EF388812446EBFDF655384096843A6AFF",
+                       "id":  "111519821901062",
+                       "kind":  "decal"
+                   },
+    "cat_Storage":  {
+                        "sha":  "8AF651D2FB98A25DC826B48383ED2C2979972DD46F64E656D9E961672BDE342E",
+                        "id":  "77384037860852",
+                        "kind":  "decal"
+                    },
+    "cat_Support":  {
+                        "sha":  "EFD9EF966C9DC677182F69FDD981EBF3902E0772F8C5F3869326E20168913F44",
+                        "id":  "103358324573732",
+                        "kind":  "decal"
+                    },
+    "cat_Tech":  {
+                     "sha":  "C5C0EA4E183037A2C6B1A0A507952C04636A5FFC113CFFAFD426FADFDA920B45",
+                     "id":  "134454186536212",
+                     "kind":  "decal"
+                 },
+    "icon_pickaxe":  {
+                         "sha":  "A30BAC6CDE787798F80B4813A2563A4C313F6D7E9AD01BBEB34DDD4D4A76D33C",
+                         "id":  "73756207589767",
+                         "kind":  "decal"
+                     },
+    "icon_quest":  {
+                       "sha":  "AB0A90600C6D490C615562665BA1889EB2CBDF3988800E8B21F7D0CB7AB1641C",
+                       "id":  "133290647717229",
+                       "kind":  "decal"
+                   },
+    "item_Amber":  {
+                       "sha":  "85A924E3A0CBA4C88550CDF3DFAE7B979A83DDD101CBFD2B16F218637E7B4505",
+                       "id":  "81878420278320",
+                       "kind":  "decal"
+                   },
+    "item_Biomass":  {
+                         "sha":  "35DC7C10C480DDD9B0743614BF40AC346C75A878CA72DFC3BF6FB9E20C0ACB55",
+                         "id":  "134052073988677",
+                         "kind":  "decal"
+                     },
+    "item_Coal":  {
+                      "sha":  "C402A9A9F038595251370B1FB634AED06F4CA13567A24D6BC02B5F043C766451",
+                      "id":  "94186419221770",
+                      "kind":  "decal"
+                  },
+    "item_Copper":  {
+                        "sha":  "5B7F30E0E941954219376AB4B2D2680157776CE96F9DB8CFC98BFE64F8F8F4F3",
+                        "id":  "98541307353474",
+                        "kind":  "decal"
+                    },
+    "item_Crystal":  {
+                         "sha":  "BE280B906D90EF0EB4E00A96E5D4F3C48A9EB7B9DCCCA66BAEC5F5523547646F",
+                         "id":  "97212709708723",
+                         "kind":  "decal"
+                     },
+    "item_DarkMatter":  {
+                            "sha":  "C201160C26B099CFD60902D1C1DFCF6001266AB70FE15392A382961C450C043C",
+                            "id":  "80359993333565",
+                            "kind":  "decal"
+                        },
+    "item_Glowstone":  {
+                           "sha":  "CBD67EA0889422C7C2238B4BCCA45C91EE7F15898D73FA0CEEBC755F98F2ADF7",
+                           "id":  "121992267435450",
+                           "kind":  "decal"
+                       },
+    "item_Ice":  {
+                     "sha":  "B6F8480CE192D9A45AD071EF282017C6AB9BF417EF9A105646B5860C6F291228",
+                     "id":  "123879928752773",
+                     "kind":  "decal"
+                 },
+    "item_LavaCore":  {
+                          "sha":  "BEDF57FC0210006EDBE9377E1B4387FCEEE215224E1D2C4BAA5D3359BCDEAA20",
+                          "id":  "128246636686176",
+                          "kind":  "decal"
+                      },
+    "item_Metal":  {
+                       "sha":  "859B43EFE6711B84A2DC560A39E7A3EB9F43F3EBA36B46ADD2227FBAB1BE1A30",
+                       "id":  "116845270784094",
+                       "kind":  "decal"
+                   },
+    "item_Ore":  {
+                     "sha":  "7F6F6A789A876C9E376775197405606DD63D7DCBFB562F97B4C5AF1F53DA5EA4",
+                     "id":  "137935553991372",
+                     "kind":  "decal"
+                 },
+    "item_Plasma":  {
+                        "sha":  "3D8FA969F3D589F5831B91C46D7812EE238C513098940389478E11028F3591E5",
+                        "id":  "97174272866422",
+                        "kind":  "decal"
+                    },
+    "item_RareGas":  {
+                         "sha":  "807C3733613A918DB65268CF73FFE37B6CCCDC291B242993E9FCBF65508FF1D1",
+                         "id":  "100080568010385",
+                         "kind":  "decal"
+                     },
+    "item_Sand":  {
+                      "sha":  "60CDFF5E681FD7C27EF16F36891EC1CCA91178558620A03E7B59F09CB7FB0668",
+                      "id":  "108302166292846",
+                      "kind":  "decal"
+                  },
+    "item_Scrap":  {
+                       "sha":  "C535E2ED73240196D8CDCACD821CFD73F90833FF7936F3C690979721EC1D18C3",
+                       "id":  "109868817902440",
+                       "kind":  "decal"
+                   },
+    "item_Silicon":  {
+                         "sha":  "62E0CFBD45FB08B5C5509CAED0B453A64BE9F5887E6543DA64AFEC7FFAD9366E",
+                         "id":  "80413822781330",
+                         "kind":  "decal"
+                     },
+    "item_Stardust":  {
+                          "sha":  "33F120A9A626BB2477B2B43F00B7981B094084B2C44CED9CCFD89FA3CD1D3BCD",
+                          "id":  "131057979390403",
+                          "kind":  "decal"
+                      },
+    "item_Sulfur":  {
+                        "sha":  "12B4BA6105EAC5D1A34D2B3FF1CF06EB89C1040451782A3D5344EEE83FD9476C",
+                        "id":  "79589685975247",
+                        "kind":  "decal"
+                    },
+    "item_Titanium":  {
+                          "sha":  "A551CCFEDB5FDADC7CBCA6E5C8AD29B3F74D28E5E7BE8D1A37403BED81639B63",
+                          "id":  "115348623610709",
+                          "kind":  "decal"
+                      },
+    "item_Water":  {
+                       "sha":  "0FBCBCD62A732561C41B184897D0C15EC379897D781B94523C66D2883029E09D",
+                       "id":  "102770377315091",
+                       "kind":  "decal"
+                   },
+    "ribbon":  {
+                   "sha":  "021CD2E78377DB4DB2E9A8CC1B27F1E5898AA0C21908A1F17CC3E744A6144CEF",
+                   "id":  "98581306109481",
+                   "kind":  "decal"
+               },
+    "title_banner":  {
+                         "sha":  "663574A66019899EE0586B64D6499280C0CF280953991707CF06E77BC56E75B1",
+                         "id":  "80465373259654",
+                         "kind":  "decal"
+                     }
+}

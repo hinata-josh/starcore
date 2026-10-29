@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>星核守護者 縮圖 1920x1080</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #05081a; }
+  svg { display: block; width: 1920px; height: 1080px; }
+  .title { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; font-weight: 900; }
+</style>
+</head>
+<body>
+<svg id="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="35%" r="85%">
+      <stop offset="0" stop-color="#2a1b6b"/>
+      <stop offset="0.5" stop-color="#101a4a"/>
+      <stop offset="1" stop-color="#04061a"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="38%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#7fe0b0"/>
+      <stop offset="0.45" stop-color="#2fae8a"/>
+      <stop offset="0.8" stop-color="#16607a"/>
+      <stop offset="1" stop-color="#0a2748"/>
+    </radialGradient>
+    <radialGradient id="rift" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.25" stop-color="#e9a8ff"/>
+      <stop offset="0.6" stop-color="#9a3cff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#4a1aa8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shield" cx="50%" cy="50%" r="50%">
+      <stop offset="0.7" stop-color="#6fd0ff" stop-opacity="0"/>
+      <stop offset="0.93" stop-color="#6fd0ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#bff0ff" stop-opacity="0.9"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffe27a"/>
+      <stop offset="1" stop-color="#ff6a3a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="planetClip"><circle cx="960" cy="1500" r="900"/></clipPath>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <g id="stars"></g>
+
+  <!-- 遠方的小星球 -->
+  <circle cx="240" cy="200" r="70" fill="#ffb86b"/>
+  <circle cx="218" cy="180" r="70" fill="#ffd9a0" opacity="0.5" filter="url(#blur8)"/>
+  <ellipse cx="240" cy="200" rx="130" ry="22" fill="none" stroke="#ffe0b0" stroke-width="7" opacity="0.8" transform="rotate(-18 240 200)"/>
+  <circle cx="1700" cy="860" r="46" fill="#8fd0ff"/>
+
+  <!-- 時空裂縫 -->
+  <g transform="translate(1390 230)">
+    <ellipse rx="330" ry="250" fill="url(#rift)" filter="url(#blur20)"/>
+    <ellipse rx="170" ry="230" fill="url(#rift)"/>
+    <ellipse rx="78" ry="205" fill="#ffffff" opacity="0.9" filter="url(#blur8)"/>
+    <g stroke="#e9b8ff" stroke-width="5" fill="none" opacity="0.85" filter="url(#glow)">
+      <path d="M-40 -230 L-12 -140 L-56 -80 L-8 0 L-52 90 L-6 230"/>
+      <path d="M40 -220 L10 -130 L58 -60 L6 20 L54 110 L8 220"/>
+    </g>
+  </g>
+
+  <!-- 怪獸剪影(從裂縫降落) -->
+  <g id="monsters" fill="#1a0b3a" stroke="#c77dff" stroke-width="4" stroke-linejoin="round" filter="url(#glow)">
+    <!-- 巨大首領 -->
+    <g transform="translate(1240 410) rotate(-14)">
+      <path d="M-120 60 C-140 -40 -90 -110 -30 -120 L-10 -170 L20 -118 C90 -112 140 -50 120 50 C100 120 40 150 0 150 C-60 150 -110 120 -120 60 Z"/>
+      <path d="M-70 -110 L-92 -178 L-48 -132 Z M60 -110 L98 -176 L74 -118 Z"/>
+      <circle cx="-38" cy="-20" r="22" fill="#ff5d73" stroke="none"/><circle cx="38" cy="-20" r="22" fill="#ff5d73" stroke="none"/>
+      <circle cx="-34" cy="-22" r="8" fill="#fff" stroke="none"/><circle cx="42" cy="-22" r="8" fill="#fff" stroke="none"/>
+      <path d="M-50 52 L-30 82 L-8 52 L12 82 L34 52 L54 80" fill="none" stroke="#ffe6ff" stroke-width="7"/>
+    </g>
+    <!-- 小怪 -->
+    <g transform="translate(1030 560) rotate(18) scale(0.55)">
+      <path d="M-90 40 C-100 -50 -40 -100 10 -96 C80 -90 110 -20 90 50 C70 100 -60 100 -90 40 Z"/>
+      <circle cx="-22" cy="-8" r="16" fill="#ffd93d" stroke="none"/><circle cx="34" cy="-8" r="16" fill="#ffd93d" stroke="none"/>
+    </g>
+    <g transform="translate(1600 520) rotate(-8) scale(0.45)">
+      <path d="M-90 40 C-100 -50 -40 -100 10 -96 C80 -90 110 -20 90 50 C70 100 -60 100 -90 40 Z"/>
+      <circle cx="-22" cy="-8" r="16" fill="#7dffb0" stroke="none"/><circle cx="34" cy="-8" r="16" fill="#7dffb0" stroke="none"/>
+    </g>
+    <!-- 飛行刃蛾 -->
+    <g transform="translate(860 330)"><path d="M0 0 L-70 -40 L-40 10 L-80 40 L0 22 L80 40 L40 10 L70 -40 Z"/></g>
+    <g transform="translate(1000 250) scale(0.7)"><path d="M0 0 L-70 -40 L-40 10 L-80 40 L0 22 L80 40 L40 10 L70 -40 Z"/></g>
+  </g>
+
+  <!-- 主角星球(下半部大弧面) -->
+  <g>
+    <circle cx="960" cy="1500" r="940" fill="#7fd6ff" opacity="0.35" filter="url(#blur20)"/>
+    <circle cx="960" cy="1500" r="900" fill="url(#planet)"/>
+    <g clip-path="url(#planetClip)" opacity="0.5">
+      <ellipse cx="520" cy="760" rx="170" ry="46" fill="#1a8a6a"/>
+      <ellipse cx="1330" cy="740" rx="150" ry="40" fill="#1a8a6a"/>
+      <ellipse cx="960" cy="690" rx="120" ry="30" fill="#1a8a6a"/>
+    </g>
+    <path d="M60 1500 A900 900 0 0 1 1860 1500" fill="none" stroke="#c8f6ff" stroke-width="10" opacity="0.85" transform="translate(0 0)"/>
+  </g>
+
+  <!-- 能量護盾 -->
+  <ellipse cx="960" cy="640" rx="560" ry="300" fill="url(#shield)"/>
+
+  <!-- 建築群(沿著星球弧面) -->
+  <g id="buildings"></g>
+
+  <!-- 砲台射向怪獸的光束 -->
+  <g id="beams" filter="url(#glow)"></g>
+
+  <!-- 標題 -->
+  <g transform="translate(110 236)">
+    <text class="title" x="6" y="10" font-size="176" fill="#1a0b4a" opacity="0.65">星核守護者</text>
+    <text class="title" x="0" y="0" font-size="176" fill="#ffffff" stroke="#6a2cff" stroke-width="13" stroke-linejoin="round" paint-order="stroke">星核守護者</text>
+    <text class="title" x="0" y="0" font-size="176" fill="url(#titleFill)">星核守護者</text>
+    <text class="title" x="6" y="84" font-size="52" fill="#ffe27a" stroke="#3a1a80" stroke-width="9" paint-order="stroke" stroke-linejoin="round">建設星球 · 穿梭時空 · 守住裂縫</text>
+  </g>
+  <defs>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#ffe9a8"/><stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<script>
+// 固定種子的亂數,每次產生的圖都一樣
+let seed = 20261029;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  parent.appendChild(e);
+  return e;
+};
+
+// 星星
+const stars = document.getElementById('stars');
+for (let i = 0; i < 260; i++) {
+  const r = rnd() * 2.2 + 0.4;
+  el('circle', { cx: rnd() * 1920, cy: rnd() * 760, r, fill: '#fff', opacity: (0.35 + rnd() * 0.65).toFixed(2) }, stars);
+}
+for (let i = 0; i < 14; i++) {
+  const x = rnd() * 1920, y = rnd() * 600, s = 8 + rnd() * 12;
+  el('path', { d: `M${x} ${y - s} L${x + s * 0.25} ${y - s * 0.25} L${x + s} ${y} L${x + s * 0.25} ${y + s * 0.25} L${x} ${y + s} L${x - s * 0.25} ${y + s * 0.25} L${x - s} ${y} L${x - s * 0.25} ${y - s * 0.25} Z`, fill: '#fff6c8', opacity: 0.9 }, stars);
+}
+
+// 星球弧面上的建築:圓心 (960,1500) 半徑 900,角度 → 位置,底部朝向球心
+const B = document.getElementById('buildings');
+const C = { x: 960, y: 1500, r: 900 };
+function place(angleDeg, draw) {
+  const a = (angleDeg - 90) * Math.PI / 180;
+  const x = C.x + Math.cos(a) * C.r, y = C.y + Math.sin(a) * C.r;
+  const g = el('g', { transform: `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${angleDeg})` }, B);
+  draw(g);
+  return { x, y, angleDeg };
+}
+// 以下 y 往上是負的(建築朝外)
+const turret = (g, s = 1) => {
+  el('rect', { x: -34 * s, y: -18 * s, width: 68 * s, height: 20 * s, rx: 6, fill: '#3a4468' }, g);
+  el('path', { d: `M${-26 * s} ${-18 * s} L${-18 * s} ${-52 * s} L${18 * s} ${-52 * s} L${26 * s} ${-18 * s} Z`, fill: '#ff6a6a', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -7 * s, y: -112 * s, width: 14 * s, height: 64 * s, rx: 5, fill: '#e8eefc', stroke: '#3a4468', 'stroke-width': 3 }, g);
+  el('rect', { x: -11 * s, y: -124 * s, width: 22 * s, height: 16 * s, rx: 5, fill: '#ffd93d', filter: 'url(#glow)' }, g);
+};
+const solar = (g, s = 1) => {
+  el('rect', { x: -4 * s, y: -44 * s, width: 8 * s, height: 44 * s, fill: '#3a4468' }, g);
+  el('path', { d: `M${-62 * s} ${-50 * s} L${62 * s} ${-50 * s} L${50 * s} ${-84 * s} L${-50 * s} ${-84 * s} Z`, fill: '#3fb6ff', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('path', { d: `M${-20 * s} ${-50 * s} L${-16 * s} ${-84 * s} M${20 * s} ${-50 * s} L${16 * s} ${-84 * s} M${-52 * s} ${-67 * s} L${52 * s} ${-67 * s}`, stroke: '#bfeaff', 'stroke-width': 2, fill: 'none' }, g);
+};
+const miner = (g, s = 1) => {
+  el('rect', { x: -40 * s, y: -34 * s, width: 80 * s, height: 34 * s, rx: 6, fill: '#f0b83a', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('path', { d: `M${-20 * s} ${-34 * s} L${-9 * s} ${-110 * s} L${9 * s} ${-110 * s} L${20 * s} ${-34 * s} Z`, fill: '#8a93b8', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -26 * s, y: -124 * s, width: 52 * s, height: 16 * s, rx: 5, fill: '#ffe27a', filter: 'url(#glow)' }, g);
+};
+const gate = (g, s = 1) => {
+  el('rect', { x: -70 * s, y: -12 * s, width: 140 * s, height: 12 * s, fill: '#3a4468' }, g);
+  el('rect', { x: -62 * s, y: -150 * s, width: 22 * s, height: 140 * s, rx: 5, fill: '#cfd6f5', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: 40 * s, y: -150 * s, width: 22 * s, height: 140 * s, rx: 5, fill: '#cfd6f5', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -74 * s, y: -176 * s, width: 148 * s, height: 28 * s, rx: 8, fill: '#a56bff', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -40 * s, y: -140 * s, width: 80 * s, height: 128 * s, rx: 10, fill: '#c9a0ff', opacity: 0.75, filter: 'url(#glow)' }, g);
+};
+const wall = (g, s = 1) => {
+  el('rect', { x: -56 * s, y: -40 * s, width: 112 * s, height: 40 * s, rx: 4, fill: '#7a86b8', stroke: '#fff', 'stroke-width': 3 }, g);
+  for (const dx of [-44, -10, 24]) el('rect', { x: dx * s, y: -58 * s, width: 22 * s, height: 20 * s, fill: '#7a86b8', stroke: '#fff', 'stroke-width': 3 }, g);
+};
+const reactor = (g, s = 1) => {
+  el('rect', { x: -38 * s, y: -80 * s, width: 76 * s, height: 80 * s, rx: 14, fill: '#37d98a', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('circle', { cx: 0, cy: -44 * s, r: 20 * s, fill: '#eafff5', filter: 'url(#glow)' }, g);
+  el('rect', { x: -48 * s, y: -92 * s, width: 96 * s, height: 14 * s, rx: 6, fill: '#3a4468' }, g);
+};
+
+const placed = [];
+const plan = [
+  [-34, wall, 1.0], [-27, solar, 1.0], [-20, turret, 1.15], [-12, miner, 1.0],
+  [-4, gate, 1.25],
+  [5, reactor, 1.1], [13, turret, 1.3], [21, solar, 1.0], [28, miner, 0.95], [36, wall, 1.0],
+];
+for (const [ang, fn, s] of plan) {
+  const p = place(ang, (g) => fn(g, s));
+  placed.push({ ...p, fn });
+}
+
+// 砲台的光束射向裂縫/怪獸
+const beams = document.getElementById('beams');
+const targets = [{ x: 1240, y: 420 }, { x: 1040, y: 540 }, { x: 1230, y: 400 }];
+let ti = 0;
+for (const p of placed) {
+  if (p.fn !== turret) continue;
+  const a = (p.angleDeg - 90) * Math.PI / 180;
+  // 砲口位置:沿「向外」方向走 120
+  const ox = p.x + Math.cos(a) * 120, oy = p.y + Math.sin(a) * 120;
+  const t = targets[ti++ % targets.length];
+  el('line', { x1: ox, y1: oy, x2: t.x, y2: t.y, stroke: '#ffe27a', 'stroke-width': 9, 'stroke-linecap': 'round', opacity: 0.95 }, beams);
+  el('line', { x1: ox, y1: oy, x2: t.x, y2: t.y, stroke: '#fff', 'stroke-width': 3, 'stroke-linecap': 'round' }, beams);
+  el('circle', { cx: t.x, cy: t.y, r: 26, fill: '#fff6a8', opacity: 0.85 }, beams);
+}
+</script>
+</body>
+</html>

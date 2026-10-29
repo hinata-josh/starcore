@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>星核守護者 縮圖 v2 1920x1080</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #05081a; }
+  svg { display: block; width: 1920px; height: 1080px; }
+  .t { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; font-weight: 900; }
+  .comic { font-family: "Arial Black", "Impact", sans-serif; font-weight: 900; }
+</style>
+</head>
+<body>
+<!-- v2:更有動作感 —— 前景兩個 Roblox 方塊人(玩家+好友)、裂縫巨獸破門、砲台光束命中、POW 爆炸字、新版建築與護盾罩 -->
+<svg id="art" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sky" cx="62%" cy="30%" r="90%">
+      <stop offset="0" stop-color="#3a1f86"/>
+      <stop offset="0.45" stop-color="#151a58"/>
+      <stop offset="1" stop-color="#050820"/>
+    </radialGradient>
+    <radialGradient id="nebA" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff5fd0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff5fd0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebB" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3ce6ff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#3ce6ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="40%" cy="20%" r="85%">
+      <stop offset="0" stop-color="#8ff0b4"/>
+      <stop offset="0.4" stop-color="#36bd86"/>
+      <stop offset="0.8" stop-color="#17707e"/>
+      <stop offset="1" stop-color="#0b2c4c"/>
+    </radialGradient>
+    <radialGradient id="portal" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.18" stop-color="#ffd2ff"/>
+      <stop offset="0.45" stop-color="#c04cff"/>
+      <stop offset="0.8" stop-color="#5a1bc0" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#2a0a70" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dome" cx="50%" cy="50%" r="50%">
+      <stop offset="0.72" stop-color="#7fe3ff" stop-opacity="0"/>
+      <stop offset="0.95" stop-color="#7fe3ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d8f8ff" stop-opacity="0.95"/>
+    </radialGradient>
+    <radialGradient id="orbGold" cx="40%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.4" stop-color="#ffe98a"/><stop offset="1" stop-color="#ff9d2a"/>
+    </radialGradient>
+    <radialGradient id="orbCyan" cx="40%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.4" stop-color="#9ff6ff"/><stop offset="1" stop-color="#1fa8ff"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#ffec9e"/><stop offset="1" stop-color="#ffa52e"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a2e"/><stop offset="1" stop-color="#ffb52e"/>
+    </linearGradient>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur18"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="bigGlow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.45"/></filter>
+    <clipPath id="planetClip"><circle cx="960" cy="1720" r="1060"/></clipPath>
+  </defs>
+
+  <!-- 宇宙背景 + 星雲 -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <ellipse cx="1500" cy="260" rx="620" ry="380" fill="url(#nebA)" filter="url(#blur40)"/>
+  <ellipse cx="380" cy="420" rx="520" ry="300" fill="url(#nebB)" filter="url(#blur40)"/>
+  <g id="stars"></g>
+
+  <!-- 遠方帶環行星 -->
+  <g transform="translate(250 760)">
+    <circle r="54" fill="#ffb86b"/>
+    <ellipse rx="104" ry="18" fill="none" stroke="#ffe3b5" stroke-width="7" opacity="0.85" transform="rotate(-16)"/>
+  </g>
+
+  <!-- 裂縫傳送門(旋轉漩渦 + 碎片光環) -->
+  <g id="portalG" transform="translate(1440 330)">
+    <circle r="330" fill="url(#portal)" filter="url(#blur18)"/>
+    <circle r="235" fill="url(#portal)"/>
+    <g id="swirl" fill="none" stroke-linecap="round"></g>
+    <g id="shards"></g>
+    <!-- 光柱往星球 -->
+    <path d="M-40 150 L40 150 L120 760 L-160 760 Z" fill="#c78bff" opacity="0.18" filter="url(#blur6)"/>
+  </g>
+
+  <!-- 裂縫巨獸(從傳送門探出) -->
+  <g id="titan" transform="translate(1440 380) scale(1.25)" filter="url(#shadow)">
+    <!-- 光環 -->
+    <circle cx="0" cy="0" r="210" fill="#e35bff" opacity="0.18" filter="url(#blur18)"/>
+    <!-- 手臂 + 爪子 -->
+    <g fill="#3d0f58" stroke="#e98cff" stroke-width="6" stroke-linejoin="round">
+      <path d="M-120 20 C-200 40 -240 120 -250 200 L-205 210 C-190 150 -160 100 -110 80 Z"/>
+      <path d="M120 20 C210 10 260 70 290 140 L250 165 C225 120 180 90 115 85 Z"/>
+    </g>
+    <g fill="#f4e6ff">
+      <path d="M-262 196 l-14 40 l24 -24 z M-238 202 l-4 44 l18 -36 z M-214 206 l6 40 l8 -40 z"/>
+      <path d="M286 136 l34 26 l-14 -34 z M270 150 l24 36 l-2 -38 z M254 160 l12 40 l8 -40 z"/>
+    </g>
+    <!-- 身體 -->
+    <path d="M-140 60 C-160 -60 -90 -140 0 -145 C90 -140 160 -60 140 60 C125 150 60 190 0 190 C-60 190 -125 150 -140 60 Z"
+          fill="#46125f" stroke="#f08cff" stroke-width="7"/>
+    <!-- 胸口裂紋 + 心臟 -->
+    <g stroke="#ff8cff" stroke-width="7" fill="none" filter="url(#glow)">
+      <path d="M-40 40 L-10 80 L-30 120"/>
+      <path d="M45 30 L20 75 L45 115"/>
+    </g>
+    <circle cx="0" cy="70" r="26" fill="#ffd6ff" filter="url(#bigGlow)"/>
+    <!-- 角冠 -->
+    <g fill="#ff7de9" stroke="#fff" stroke-width="4" filter="url(#glow)">
+      <path d="M-95 -110 L-150 -230 L-55 -140 Z"/>
+      <path d="M95 -110 L150 -230 L55 -140 Z"/>
+      <path d="M-30 -140 L-10 -250 L10 -140 Z" fill="#ffe0ff"/>
+    </g>
+    <!-- 三隻眼 -->
+    <g filter="url(#bigGlow)">
+      <ellipse cx="-50" cy="-40" rx="30" ry="22" fill="#ff3fd5"/>
+      <ellipse cx="50" cy="-40" rx="30" ry="22" fill="#ff3fd5"/>
+      <circle cx="0" cy="-88" r="18" fill="#ffffff"/>
+    </g>
+    <circle cx="-44" cy="-44" r="9" fill="#fff"/><circle cx="56" cy="-44" r="9" fill="#fff"/>
+    <!-- 嘴 + 牙 -->
+    <path d="M-60 10 Q0 50 60 10" fill="#1b0526" stroke="#f08cff" stroke-width="5"/>
+    <path d="M-45 16 l12 22 l10 -18 l12 22 l10 -20 l12 22 l10 -20 l12 18" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 飛行刃蛾、電漿幼龍、酸液蟲(往下衝) -->
+  <g id="minions" filter="url(#shadow)"></g>
+
+  <!-- 星球(大弧面)+ 大氣光 -->
+  <circle cx="960" cy="1720" r="1110" fill="#7fe0ff" opacity="0.35" filter="url(#blur18)"/>
+  <circle cx="960" cy="1720" r="1060" fill="url(#planet)"/>
+  <g clip-path="url(#planetClip)" opacity="0.45">
+    <ellipse cx="520" cy="770" rx="210" ry="42" fill="#1a8a6a"/>
+    <ellipse cx="1420" cy="760" rx="180" ry="36" fill="#1a8a6a"/>
+    <ellipse cx="980" cy="700" rx="140" ry="28" fill="#1a8a6a"/>
+  </g>
+  <path d="M-100 1720 A1060 1060 0 0 1 2020 1720" fill="none" stroke="#d6fbff" stroke-width="10" opacity="0.8"/>
+
+  <!-- 護盾罩 -->
+  <ellipse cx="1060" cy="690" rx="560" ry="250" fill="url(#dome)"/>
+
+  <!-- 建築群 -->
+  <g id="buildings"></g>
+  <!-- 光束 + 爆炸 -->
+  <g id="beams"></g>
+
+  <!-- 前景:兩個 Roblox 方塊人 -->
+  <g id="avatars" filter="url(#shadow)"></g>
+
+  <!-- 標題 -->
+  <g transform="translate(70 236) rotate(-4)">
+    <text class="t" x="10" y="14" font-size="172" fill="#16053f" opacity="0.7">星核守護者</text>
+    <text class="t" x="0" y="0" font-size="172" fill="#fff" stroke="#5a1fe0" stroke-width="22" stroke-linejoin="round" paint-order="stroke">星核守護者</text>
+    <text class="t" x="0" y="0" font-size="172" fill="url(#titleFill)">星核守護者</text>
+    <!-- 副標彩帶 -->
+    <g transform="translate(8 40)">
+      <path d="M0 0 H640 L612 34 L640 68 H0 Z" fill="url(#ribbon)" stroke="#7a2a00" stroke-width="5" stroke-linejoin="round"/>
+      <text class="t" x="28" y="50" font-size="46" fill="#fff" stroke="#7a2a00" stroke-width="7" paint-order="stroke" stroke-linejoin="round">建設星球 · 穿梭時空 · 守住裂縫!</text>
+    </g>
+  </g>
+
+  <!-- 「和好友一起玩!」徽章 -->
+  <g transform="translate(1690 940) rotate(-8)">
+    <circle r="118" fill="#2fbf6a" stroke="#fff" stroke-width="10"/>
+    <circle r="96" fill="none" stroke="#bff5d0" stroke-width="4" stroke-dasharray="10 9"/>
+    <text class="t" y="-14" font-size="44" fill="#fff" text-anchor="middle" stroke="#0b5a2a" stroke-width="6" paint-order="stroke">和好友</text>
+    <text class="t" y="42" font-size="44" fill="#fff" text-anchor="middle" stroke="#0b5a2a" stroke-width="6" paint-order="stroke">一起玩!</text>
+  </g>
+</svg>
+
+<script>
+// 固定種子,每次產生的圖都一樣
+let seed = 20261030;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  parent.appendChild(e);
+  return e;
+};
+
+// 星星
+const stars = document.getElementById('stars');
+for (let i = 0; i < 300; i++) {
+  el('circle', { cx: rnd() * 1920, cy: rnd() * 820, r: rnd() * 2.4 + 0.4, fill: '#fff', opacity: (0.3 + rnd() * 0.7).toFixed(2) }, stars);
+}
+for (let i = 0; i < 18; i++) {
+  const x = rnd() * 1920, y = rnd() * 700, s = 8 + rnd() * 14;
+  el('path', { d: `M${x} ${y - s} L${x + s * 0.22} ${y - s * 0.22} L${x + s} ${y} L${x + s * 0.22} ${y + s * 0.22} L${x} ${y + s} L${x - s * 0.22} ${y + s * 0.22} L${x - s} ${y} L${x - s * 0.22} ${y - s * 0.22} Z`, fill: '#fff6c8', opacity: 0.9 }, stars);
+}
+
+// 傳送門漩渦 + 碎片
+const swirl = document.getElementById('swirl');
+for (let k = 0; k < 5; k++) {
+  const r0 = 60 + k * 38;
+  el('path', { d: `M${r0} 0 A${r0} ${r0} 0 1 1 ${-r0 * 0.6} ${-r0 * 0.8}`, stroke: k % 2 ? '#ffd0ff' : '#b56bff', 'stroke-width': 10 - k, opacity: 0.85 - k * 0.12, transform: `rotate(${k * 47})` }, swirl);
+}
+const shards = document.getElementById('shards');
+for (let k = 0; k < 18; k++) {
+  const a = k / 18 * Math.PI * 2, r = 265 + (k % 3) * 14;
+  el('rect', { x: -10, y: -26, width: 20, height: 52, rx: 6, fill: k % 2 ? '#ff8ff0' : '#a96bff', transform: `rotate(${a * 180 / Math.PI}) translate(${r} 0) rotate(${30 + k * 11})`, filter: 'url(#glow)' }, shards);
+}
+
+// 小怪:刃蛾 / 幼龍 / 酸液蟲
+const minions = document.getElementById('minions');
+function moth(x, y, s, rot) {
+  const g = el('g', { transform: `translate(${x} ${y}) rotate(${rot}) scale(${s})` }, minions);
+  for (const side of [-1, 1]) {
+    el('path', { d: `M0 0 C${side * 60} -90 ${side * 160} -70 ${side * 150} 10 C${side * 120} 40 ${side * 40} 30 0 10 Z`, fill: '#ffb84a', stroke: '#fff7c8', 'stroke-width': 6, opacity: 0.95 }, g);
+    el('circle', { cx: side * 90, cy: -20, r: 18, fill: '#7ff8ff', filter: 'url(#glow)' }, g);
+  }
+  el('ellipse', { cx: 0, cy: 10, rx: 22, ry: 48, fill: '#3b2f28' }, g);
+  el('circle', { cx: 0, cy: -38, r: 22, fill: '#ffd34a' }, g);
+  el('circle', { cx: -9, cy: -42, r: 7, fill: '#7ff8ff' }, g);
+  el('circle', { cx: 9, cy: -42, r: 7, fill: '#7ff8ff' }, g);
+}
+function drake(x, y, s, rot) {
+  const g = el('g', { transform: `translate(${x} ${y}) rotate(${rot}) scale(${s})` }, minions);
+  el('path', { d: 'M-20 -10 C-120 -120 -200 -60 -230 -10 C-160 -30 -100 0 -40 20 Z', fill: '#6d4fe0', stroke: '#9ff6ff', 'stroke-width': 6 }, g);
+  el('path', { d: 'M20 -10 C120 -120 200 -60 230 -10 C160 -30 100 0 40 20 Z', fill: '#6d4fe0', stroke: '#9ff6ff', 'stroke-width': 6 }, g);
+  el('ellipse', { cx: 0, cy: 20, rx: 58, ry: 44, fill: '#3f74e0', stroke: '#c9e4ff', 'stroke-width': 5 }, g);
+  el('circle', { cx: 0, cy: 26, r: 18, fill: '#8ff6ff', filter: 'url(#bigGlow)' }, g);
+  el('rect', { x: -32, y: -58, width: 64, height: 46, rx: 16, fill: '#3f74e0', stroke: '#c9e4ff', 'stroke-width': 5 }, g);
+  el('circle', { cx: -14, cy: -38, r: 8, fill: '#ffe84a' }, g);
+  el('circle', { cx: 14, cy: -38, r: 8, fill: '#ffe84a' }, g);
+  el('path', { d: 'M-20 -58 L-28 -86 L-8 -60 Z M20 -58 L28 -86 L8 -60 Z', fill: '#eef3ff' }, g);
+}
+function worm(x, y, s, rot) {
+  const g = el('g', { transform: `translate(${x} ${y}) rotate(${rot}) scale(${s})` }, minions);
+  const rs = [44, 40, 36, 31, 26, 20];
+  let cx = 0;
+  rs.forEach((r, i) => {
+    el('circle', { cx, cy: (i % 2) * 8, r, fill: i === 0 ? '#3f8f2a' : '#73d94a', stroke: '#d9ff9a', 'stroke-width': 4 }, g);
+    if (i > 0) el('circle', { cx, cy: (i % 2) * 8 - r * 0.6, r: r * 0.25, fill: '#d6ff6a', filter: 'url(#glow)' }, g);
+    cx += r * 1.25;
+  });
+  el('circle', { cx: -14, cy: -14, r: 10, fill: '#ffe84a' }, g);
+  el('circle', { cx: 12, cy: -16, r: 10, fill: '#ffe84a' }, g);
+  el('path', { d: 'M-30 20 l-22 10 M-20 28 l-14 18', stroke: '#fff', 'stroke-width': 7, 'stroke-linecap': 'round' }, g);
+}
+moth(1120, 300, 0.9, -18);
+moth(1780, 520, 0.7, 14);
+drake(1180, 560, 0.85, -10);
+worm(1650, 680, 0.85, 20);
+
+// 星球弧面上的建築:圓心 (960,1720) 半徑 1060,角度 → 位置,底部朝向球心
+const B = document.getElementById('buildings');
+const C = { x: 960, y: 1720, r: 1060 };
+const muzzles = [];
+function place(angleDeg, draw) {
+  const a = (angleDeg - 90) * Math.PI / 180;
+  const x = C.x + Math.cos(a) * C.r, y = C.y + Math.sin(a) * C.r;
+  const g = el('g', { transform: `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${angleDeg})` }, B);
+  draw(g, x, y, angleDeg);
+}
+const toWorld = (x, y, ang, lx, ly) => {
+  const a = ang * Math.PI / 180;
+  return { x: x + lx * Math.cos(a) - ly * Math.sin(a), y: y + lx * Math.sin(a) + ly * Math.cos(a) };
+};
+// 指揮中心
+function command(g) {
+  for (const sx of [-1, 1]) el('rect', { x: sx * 78 - 8, y: -46, width: 16, height: 48, fill: '#3a4052', transform: `rotate(${sx * -12} ${sx * 78} 0)` }, g);
+  el('path', { d: 'M-110 -40 L-80 -100 L80 -100 L110 -40 L80 -18 L-80 -18 Z', fill: '#b4bbcc', stroke: '#fff', 'stroke-width': 4 }, g);
+  el('rect', { x: -112, y: -50, width: 224, height: 10, fill: '#ffbe3c' }, g);
+  el('rect', { x: -60, y: -86, width: 120, height: 10, rx: 4, fill: '#7fd8ff', filter: 'url(#glow)' }, g);
+  el('path', { d: 'M-70 -100 L-50 -140 L50 -140 L70 -100 Z', fill: '#3a4052' }, g);
+  el('rect', { x: -36, y: -210, width: 44, height: 72, fill: '#b4bbcc', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -38, y: -196, width: 48, height: 12, fill: '#7fd8ff', filter: 'url(#glow)' }, g);
+  el('ellipse', { cx: -14, cy: -226, rx: 30, ry: 12, fill: '#dfe6f5', transform: 'rotate(-25 -14 -226)' }, g);
+  el('circle', { cx: 40, cy: -152, r: 24, fill: '#9fe6ff', opacity: 0.85 }, g);
+  el('rect', { x: 66, y: -200, width: 4, height: 60, fill: '#ccd' }, g);
+  el('path', { d: 'M70 -200 L104 -190 L70 -178 Z', fill: '#4aa3ff' }, g);
+}
+// 光子砲(金色台座 + 浮空能量球)
+function photon(g, x, y, ang, orb) {
+  el('path', { d: 'M-46 0 L-36 -26 L36 -26 L46 0 Z', fill: '#d9a845', stroke: '#fff2c4', 'stroke-width': 3 }, g);
+  for (const sx of [-1, 1]) el('path', { d: `M${sx * 30} -24 L${sx * 18} -98 L${sx * 8} -96 L${sx * 14} -24 Z`, fill: '#c8932f', stroke: '#fff2c4', 'stroke-width': 3 }, g);
+  el('circle', { cx: 0, cy: -118, r: 30, fill: `url(#${orb})`, filter: 'url(#bigGlow)' }, g);
+  el('ellipse', { cx: 0, cy: -118, rx: 52, ry: 12, fill: 'none', stroke: '#fff6c8', 'stroke-width': 4, opacity: 0.7 }, g);
+  muzzles.push(toWorld(x, y, ang, 0, -118));
+}
+// 飛彈砲塔(轉台 + 兩側莢艙)
+function missile(g, x, y, ang) {
+  el('path', { d: 'M-44 0 L-34 -24 L34 -24 L44 0 Z', fill: '#3a4052' }, g);
+  el('rect', { x: -12, y: -60, width: 24, height: 38, fill: '#9aa3b8' }, g);
+  el('rect', { x: -34, y: -96, width: 68, height: 40, rx: 8, fill: '#e3e7ef', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -16, y: -84, width: 32, height: 8, rx: 3, fill: '#ff5a46', filter: 'url(#glow)' }, g);
+  for (const sx of [-1, 1]) {
+    el('rect', { x: sx * 52 - 16, y: -104, width: 32, height: 56, rx: 6, fill: '#2b3040' }, g);
+    for (const yy of [-92, -72]) for (const xx of [-7, 7]) el('circle', { cx: sx * 52 + xx, cy: yy, r: 6, fill: '#ff6a52', filter: 'url(#glow)' }, g);
+  }
+  muzzles.push(toWorld(x, y, ang, 52, -100));
+}
+// 時空門
+function gate(g) {
+  el('rect', { x: -70, y: -14, width: 140, height: 14, fill: '#3a4052' }, g);
+  for (const sx of [-1, 1]) el('rect', { x: sx * 52 - 12, y: -160, width: 24, height: 148, rx: 6, fill: '#cfd6f5', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -74, y: -186, width: 148, height: 30, rx: 9, fill: '#a56bff', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -40, y: -150, width: 80, height: 136, rx: 12, fill: '#c9a0ff', opacity: 0.85, filter: 'url(#bigGlow)' }, g);
+}
+// 太陽能板
+function solar(g) {
+  el('rect', { x: -5, y: -46, width: 10, height: 46, fill: '#3a4052' }, g);
+  el('path', { d: 'M-64 -52 L64 -52 L52 -88 L-52 -88 Z', fill: '#3fb6ff', stroke: '#fff', 'stroke-width': 3 }, g);
+}
+// 合金牆(黃黑警示條)
+function wall(g) {
+  el('rect', { x: -60, y: -46, width: 120, height: 46, rx: 4, fill: '#9aa6bd', stroke: '#fff', 'stroke-width': 3 }, g);
+  el('rect', { x: -60, y: -28, width: 120, height: 12, fill: '#ffd23c' }, g);
+  for (let i = -54; i < 60; i += 22) el('path', { d: `M${i} -28 L${i + 10} -28 L${i} -16 L${i - 10} -16 Z`, fill: '#2b3040' }, g);
+}
+
+const plan = [
+  [-40, wall], [-33, solar], [-26, (g, x, y, a) => missile(g, x, y, a)], [-18, gate],
+  [-6, command], [6, (g, x, y, a) => photon(g, x, y, a, 'orbGold')], [14, (g, x, y, a) => missile(g, x, y, a)],
+  [22, (g, x, y, a) => photon(g, x, y, a, 'orbCyan')], [30, solar], [37, wall],
+];
+for (const [ang, fn] of plan) place(ang, fn);
+
+// 光束:砲口 → 怪獸,命中處爆炸
+const beams = document.getElementById('beams');
+const targets = [{ x: 1300, y: 470 }, { x: 1185, y: 545 }, { x: 1440, y: 430 }, { x: 1120, y: 310 }];
+muzzles.forEach((m, i) => {
+  const t = targets[i % targets.length];
+  const color = i % 2 ? '#7ff8ff' : '#ffe35a';
+  el('line', { x1: m.x, y1: m.y, x2: t.x, y2: t.y, stroke: color, 'stroke-width': 16, 'stroke-linecap': 'round', opacity: 0.55, filter: 'url(#glow)' }, beams);
+  el('line', { x1: m.x, y1: m.y, x2: t.x, y2: t.y, stroke: '#fff', 'stroke-width': 5, 'stroke-linecap': 'round' }, beams);
+});
+// 漫畫爆炸星
+function burst(x, y, r, fill, text, size, rot) {
+  const g = el('g', { transform: `translate(${x} ${y}) rotate(${rot})` }, beams);
+  let d = '';
+  for (let i = 0; i < 24; i++) {
+    const a = i / 24 * Math.PI * 2, rr = i % 2 ? r * 0.62 : r;
+    d += (i ? 'L' : 'M') + (Math.cos(a) * rr).toFixed(1) + ' ' + (Math.sin(a) * rr).toFixed(1);
+  }
+  el('path', { d: d + 'Z', fill, stroke: '#fff', 'stroke-width': 8, 'stroke-linejoin': 'round' }, g);
+  if (text) {
+    const t = el('text', { class: 'comic', 'font-size': size, 'text-anchor': 'middle', y: size * 0.35, fill: '#fff', stroke: '#7a1200', 'stroke-width': 8, 'paint-order': 'stroke' }, g);
+    t.textContent = text;
+  }
+}
+burst(1300, 470, 110, '#ff5a2e', 'POW!', 64, -12);
+burst(1185, 545, 52, '#ffd23c', '', 0, 0);
+burst(1120, 310, 46, '#ffd23c', '', 0, 0);
+
+// 前景 Roblox 方塊人
+const AV = document.getElementById('avatars');
+function avatar(x, y, s, o) {
+  const g = el('g', { transform: `translate(${x} ${y}) scale(${s})` }, AV);
+  // 腿
+  el('rect', { x: -46, y: 70, width: 44, height: 120, rx: 8, fill: o.legs, stroke: '#1d2333', 'stroke-width': 5 }, g);
+  el('rect', { x: 4, y: 70, width: 44, height: 120, rx: 8, fill: o.legs, stroke: '#1d2333', 'stroke-width': 5, transform: `rotate(${o.legRot || 0} 26 70)` }, g);
+  // 身體
+  el('rect', { x: -50, y: -50, width: 100, height: 124, rx: 10, fill: o.shirt, stroke: '#1d2333', 'stroke-width': 5 }, g);
+  if (o.logo) el('circle', { cx: 0, cy: 8, r: 20, fill: o.logo, stroke: '#fff', 'stroke-width': 4 }, g);
+  // 手臂(左手 / 右手可旋轉)
+  el('rect', { x: -96, y: -48, width: 42, height: 116, rx: 10, fill: o.skin, stroke: '#1d2333', 'stroke-width': 5, transform: `rotate(${o.armL} -75 -40)` }, g);
+  el('rect', { x: 54, y: -48, width: 42, height: 116, rx: 10, fill: o.skin, stroke: '#1d2333', 'stroke-width': 5, transform: `rotate(${o.armR} 75 -40)` }, g);
+  if (o.tool) o.tool(g);
+  // 頭
+  el('rect', { x: -44, y: -140, width: 88, height: 86, rx: 22, fill: o.skin, stroke: '#1d2333', 'stroke-width': 5 }, g);
+  if (o.hair) o.hair(g);
+  // 臉:大眼 + 張嘴笑
+  el('ellipse', { cx: -16, cy: -102, rx: 7, ry: 10, fill: '#1d2333' }, g);
+  el('ellipse', { cx: 16, cy: -102, rx: 7, ry: 10, fill: '#1d2333' }, g);
+  el('circle', { cx: -13, cy: -106, r: 3, fill: '#fff' }, g);
+  el('circle', { cx: 19, cy: -106, r: 3, fill: '#fff' }, g);
+  el('path', { d: o.mouth, fill: '#7a1f2a', stroke: '#1d2333', 'stroke-width': 4, 'stroke-linejoin': 'round' }, g);
+  return g;
+}
+// 玩家:指向怪獸
+avatar(330, 760, 1.55, {
+  skin: '#ffd23c', shirt: '#2f7cf6', legs: '#5cc24a', logo: '#ffd23c',
+  armL: 18, armR: -128, legRot: 10,
+  mouth: 'M-20 -80 Q0 -56 20 -80 Z',
+  hair: (g) => el('path', { d: 'M-48 -128 C-40 -170 40 -176 50 -126 C30 -140 -10 -146 -48 -128 Z', fill: '#c25a1d', stroke: '#1d2333', 'stroke-width': 5 }, g),
+});
+// 好友:右手高舉鎬子歡呼(站在玩家右邊,不重疊)
+avatar(690, 850, 1.25, {
+  skin: '#ffd23c', shirt: '#ff5a5a', legs: '#2b3040', logo: '#ffffff',
+  armL: 22, armR: -165, legRot: -6,
+  mouth: 'M-18 -82 Q0 -60 18 -82 Z',
+  hair: (g) => {
+    el('rect', { x: -50, y: -150, width: 100, height: 22, rx: 8, fill: '#2fbf6a', stroke: '#1d2333', 'stroke-width': 5 }, g);
+    el('rect', { x: 20, y: -138, width: 56, height: 14, rx: 6, fill: '#2fbf6a', stroke: '#1d2333', 'stroke-width': 4 }, g);
+  },
+  tool: (g) => {
+    const p = el('g', { transform: 'translate(105 -150) rotate(25)' }, g);
+    el('rect', { x: -6, y: 0, width: 12, height: 120, rx: 4, fill: '#8a5a2b', stroke: '#1d2333', 'stroke-width': 4 }, p);
+    el('path', { d: 'M-60 6 Q0 -30 60 6 L48 16 Q0 -10 -48 16 Z', fill: '#cfd6f5', stroke: '#1d2333', 'stroke-width': 4 }, p);
+  },
+});
+// 對話框
+const bubble = el('g', { transform: 'translate(40 380)' }, AV);
+el('path', { d: 'M0 0 H300 Q320 0 320 20 V90 Q320 110 300 110 H120 L80 150 L88 110 H20 Q0 110 0 90 V20 Q0 0 20 0 Z', fill: '#fff', stroke: '#1d2333', 'stroke-width': 6 }, bubble);
+const bt = el('text', { class: 't', x: 160, y: 72, 'font-size': 52, 'text-anchor': 'middle', fill: '#1d2333' }, bubble);
+bt.textContent = '守住它!';
+</script>
+</body>
+</html>

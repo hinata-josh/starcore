@@ -1,0 +1,178 @@
+{
+ "btn_gray": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_blue": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_green": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_red": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_orange": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_white": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_gold": {
+  "w": 128,
+  "h": 128
+ },
+ "btn_close": {
+  "w": 128,
+  "h": 128
+ },
+ "ribbon": {
+  "w": 128,
+  "h": 64
+ },
+ "title_banner": {
+  "w": 256,
+  "h": 64
+ },
+ "card_t1": {
+  "w": 128,
+  "h": 128
+ },
+ "card_t2": {
+  "w": 128,
+  "h": 128
+ },
+ "card_t3": {
+  "w": 128,
+  "h": 128
+ },
+ "card_t4": {
+  "w": 128,
+  "h": 128
+ },
+ "card_t5": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Energy": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Collect": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Storage": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Attack": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Defense": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Support": {
+  "w": 128,
+  "h": 128
+ },
+ "cat_Tech": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Ore": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Metal": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Ice": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Biomass": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Scrap": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Sand": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Water": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Coal": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Copper": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Silicon": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Sulfur": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Amber": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Titanium": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Crystal": {
+  "w": 128,
+  "h": 128
+ },
+ "item_LavaCore": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Glowstone": {
+  "w": 128,
+  "h": 128
+ },
+ "item_RareGas": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Plasma": {
+  "w": 128,
+  "h": 128
+ },
+ "item_Stardust": {
+  "w": 128,
+  "h": 128
+ },
+ "item_DarkMatter": {
+  "w": 128,
+  "h": 128
+ },
+ "icon_pickaxe": {
+  "w": 128,
+  "h": 128
+ },
+ "icon_quest": {
+  "w": 128,
+  "h": 128
+ }
+}

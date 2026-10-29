@@ -1,0 +1,9 @@
+Packages/
+ServerPackages/
+sourcemap.json
+*.rbxl
+*.rbxlx
+node_modules/
+build/
+publish.config.json
+*.log
